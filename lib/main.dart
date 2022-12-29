@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'Gridview/gridview.dart';
 import 'Responsive 1/responsive.dart';
 
 void main() {
@@ -34,6 +35,18 @@ class _HomePageState extends State<HomePage> {
           ElevatedButton(
               onPressed: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context) => Responsive()));
+              },
+              child: Text("Responsive 1")),
+
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => GriwViews()));
+              },
+              child: Text("Responsive 1")),
+
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => GriwViews()));
               },
               child: Text("Responsive 1")),
         ],

@@ -194,7 +194,167 @@ class _MobileScreenState extends State<MobileScreen> {
             ),
           ),
 
+          //............... GridView Row Scroller..............
+          Row(
+            children: [
+              Container(
+                height: 150,
+                width: MediaQuery.of(context).size.width,
+                child: GridView.count(
+                  scrollDirection: Axis.horizontal,
+                    crossAxisCount: 1,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  children: [
 
+
+                    Container(
+                      height: 100,
+                      width: MediaQuery.of(context).size.width,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                            height: 40,
+                              width: 40,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/1185/1185316.png", color: Colors.red,)),
+                          SizedBox(height: 10,),
+                          Text("ডিজাইন এন্ড মাল্টিমিডিয়া", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              height: 50,
+                              width: 50,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/9251/9251770.png", color: Colors.red,)),
+                          SizedBox(height: 5,),
+                          Text("ওয়েব এন্ড সফটওয়্যার", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              height: 40,
+                              width: 40,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/6163/6163831.png", color: Colors.red,)),
+                          SizedBox(height: 10,),
+                          Text("ডডিজিটাল মার্কেটিং", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              height: 40,
+                              width: 40,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/4427/4427916.png", color: Colors.red,)),
+                          SizedBox(height: 10,),
+                          Text("3D অ্যানিমেশন", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              height: 40,
+                              width: 40,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/1239/1239608.png", color: Colors.red,)),
+                          SizedBox(height: 10,),
+                          Text("নেটওয়ার্ক টেকনোলোজি", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+                    Container(
+                      height: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.grey[100],
+                      ),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Container(
+                              height: 40,
+                              width: 40,
+                              child: Image.network("https://cdn-icons-png.flaticon.com/128/1179/1179120.png", color: Colors.red,)),
+                          SizedBox(height: 10,),
+                          Text("ফিল্ম এন্ড মিডিয়া", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black),),
+                        ],
+                      ),
+                    ),
+
+
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          SizedBox(height: 30,),
+          Container(
+            height: 80,
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("জনপ্রিয় কোর্সসমূহ", style: TextStyle(color: Colors.black, fontSize: 30, fontWeight: FontWeight.bold),),
+              ],
+            ),
+          ),
+
+          Padding(
+            padding: const EdgeInsets.only(left: 50, right: 50),
+            child: Container(
+              height: 80,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text("দেশ ও দেশের বাইরে বর্তমানে যে স্কিলগুলোর চাহিদা সবচেয়ে বেশি, সেসব দিয়েই সাজানো হয়েছে আমাদের কোর্স লিস্ট। এখান থেকে আপনার সুবিধামত অনলাইন বা অফলাইন কোর্সে এনরোল করতে পারবেন যেকোনো সময়।", style: TextStyle(color: Colors.black, fontSize: 14, fontWeight: FontWeight.bold),),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
 
