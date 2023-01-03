@@ -12,25 +12,29 @@ class _PostDemoScreenState extends State<PostDemoScreen> {
   void initState() {
     super.initState();
     final postMdl = Provider.of<PostProvider>(context, listen: false);
+    final postMultiMdl = Provider.of<PostProvider>(context, listen: false);
     postMdl.getPostData(context);
-    postMdl.getPostListData(context);
+    postMultiMdl.getPostListData(context);
   }
 
   @override
   Widget build(BuildContext context) {
     final postMdl = Provider.of<PostProvider>(context);
+    final postMultiMdl = Provider.of<PostProvider>(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Provider Demo"),
       ),
       body: Column(
         children: [
-          /*Container(
+
+          // One API data
+          Container(
             padding: EdgeInsets.all(20),
             child: postMdl==null
                 ? Container(
-              child: CircularProgressIndicator(),
-            ) : Column(
+              child: CircularProgressIndicator(),) : Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
@@ -47,16 +51,18 @@ class _PostDemoScreenState extends State<PostDemoScreen> {
               ],
             )
             ,
-          ),*/
+          ),
+
+          //Multi API data
           SizedBox(height: 20,),
           SizedBox(height: 25,
             child: Text("Post List", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20,)),),
 
-          postMdl.postList!=null ? SizedBox(
+          postMultiMdl.postList!=null ? SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height/2,
             child: ListView.builder(
-                itemCount: postMdl.postList!.length,
+                itemCount: postMultiMdl.postList!.length,
                 padding: EdgeInsets.all(10),
                 itemBuilder: (context, index) {
                   return Container(
@@ -67,13 +73,13 @@ class _PostDemoScreenState extends State<PostDemoScreen> {
                         Container(
                           margin: EdgeInsets.only(top: 40, bottom: 20),
                           child: Text(
-                            "${postMdl.postList![index].title}" ?? "",
+                            "${postMultiMdl.postList![index].title}" ?? "",
                             style:
                             TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                           ),
                         ),
                         Container(
-                          child: Text("${postMdl.postList![index].body}" ?? ""),
+                          child: Text("${postMultiMdl.postList![index].body}" ?? ""),
                         )
                       ],
                     ),

@@ -8,7 +8,6 @@ class Post_Repository{
   Future<PostModel?> getSinglePostData(context) async {
     PostModel? result;
     try {
-
       var client = http.Client();
       var url = Uri.https('jsonplaceholder.typicode.com', '/posts/1');
 

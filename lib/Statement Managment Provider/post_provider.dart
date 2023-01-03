@@ -6,12 +6,10 @@ import 'Repository/post_repository.dart';
 class PostProvider with ChangeNotifier{
 
   Post_Repository post_repository = Post_Repository();
-  PostModel postModel = PostModel();
 
   bool loading = false;
-  List<PostModel>? _postList;
-  List<PostModel>? get postList=>_postList;
 
+  // One List..
   PostModel? _post;
   PostModel? get post => _post;
 
@@ -22,11 +20,14 @@ class PostProvider with ChangeNotifier{
     notifyListeners();
   }
 
+  // Multi List..
+  List<PostModel>? _postList;
+  List<PostModel>? get postList=>_postList;
+
   getPostListData(context) async {
     loading = true;
     _postList = await post_repository!.getPostListData(context);
     loading = false;
-    print(_postList);
     notifyListeners();
   }
 

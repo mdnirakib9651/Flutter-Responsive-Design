@@ -4,6 +4,9 @@ import 'package:provider/single_child_widget.dart';
 import 'package:responsive/Statement%20Managment%20Provider/post_provider.dart';
 
 import 'Gridview/gridview.dart';
+import 'Provider Photo/Model/comment.dart';
+import 'Provider Photo/Post Provider/photo_provider.dart';
+import 'Provider Photo/Screen/screen_demo.dart';
 import 'Responsive 1/responsive.dart';
 import 'Statement Managment Provider/Screen/post_demo.dart';
 
@@ -11,6 +14,7 @@ void main() {
   runApp(MultiProvider(
     providers: [
       ChangeNotifierProvider<PostProvider>(create: (_) => PostProvider()),
+      ChangeNotifierProvider<PhotoProvider>(create: (_) => PhotoProvider()),
     ],
       child: MyApp()));
 }
@@ -62,6 +66,12 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(context, MaterialPageRoute(builder: (context) => PostDemoScreen()));
               },
               child: Text("Post Demo")),
+
+          ElevatedButton(
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScreenDemo()));
+              },
+              child: Text("API Demo")),
         ],
       ),
     );
