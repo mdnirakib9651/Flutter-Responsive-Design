@@ -15,12 +15,12 @@ class _ResponsiveState extends State<Responsive> {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constain){
-      if(constain.maxWidth < 640){
+      if(constain.maxWidth < 1150){
         return MobileScreen();
       }
-      else if(constain.maxWidth < 962){
-        return TabletScreen();
-      }
+      // else if(constain.maxWidth < 962){
+      //   return TabletScreen();
+      // }
       return WebScreen();
     });
   }
